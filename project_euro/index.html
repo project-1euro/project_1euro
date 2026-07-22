@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Project €1 — The world's most honest business." />
+    <title>Project €1 — The world's most honest business.</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+    <style>
+      :root { --black:#000; --grey:#555; --line:#dedede; --soft:#f7f7f7; }
+      * { box-sizing:border-box; }
+      html { scroll-behavior:smooth; }
+      body { margin:0; color:var(--black); background:#fff; font-family:Inter,Helvetica,Arial,sans-serif; font-size:15px; letter-spacing:-.02em; }
+      a { color:inherit; text-decoration:none; }
+      .wrap { max-width:1240px; margin:auto; padding:0 32px; }
+      .nav { height:76px; display:flex; align-items:center; justify-content:space-between; border-bottom:1px solid var(--line); }
+      .brand { display:inline-flex; align-items:center; }
+      .brand img { display:block; width:96px; height:auto; mix-blend-mode:multiply; }
+      .nav-links { display:flex; gap:28px; align-items:center; color:var(--grey); font-size:13px; }
+      .nav-links a { transition:color .35s ease; } .nav-links a:hover { color:#000; }
+      .nav-cta, .button { border:1px solid #000; border-radius:999px; padding:11px 17px; font-size:13px; color:#000; transition:background .35s,color .35s,transform .35s; }
+      .nav-cta:hover, .button:hover { background:#000; color:#fff; transform:translateY(-1px); }
+      .hero { min-height:calc(100vh - 76px); display:flex; align-items:center; justify-content:center; text-align:center; padding:100px 0 130px; }
+      .hero-inner { max-width:820px; }
+      .hero-logo { width:min(500px,80vw); height:auto; display:block; margin:0 auto; mix-blend-mode:multiply; opacity:0; animation:reveal 1s .08s forwards; }
+      .eyebrow { margin:59px 0 20px; font-size:11px; font-weight:600; letter-spacing:.14em; }
+      h1 { font-size:clamp(41px,6.4vw,78px); font-weight:500; line-height:1.02; letter-spacing:-.075em; margin:0; }
+      .hero p { color:var(--grey); font-size:clamp(17px,2vw,21px); line-height:1.5; margin:27px auto 38px; max-width:410px; }
+      .button { display:inline-block; padding:15px 24px; font-weight:500; }
+      .scroll-note { margin-top:80px; color:#888; font-size:11px; letter-spacing:.08em; text-transform:uppercase; }
+      .stats { border-top:1px solid var(--line); border-bottom:1px solid var(--line); display:grid; grid-template-columns:repeat(3,1fr); }
+      .stat { padding:44px 0 47px; text-align:center; border-right:1px solid var(--line); } .stat:last-child{border:0}
+      .stat-number { font-size:clamp(38px,5vw,64px); letter-spacing:-.08em; font-weight:500; display:block; }
+      .stat-label { display:block; color:var(--grey); margin-top:9px; font-size:12px; }
+      section { padding:160px 0; }
+      .section-kicker { font-size:11px; letter-spacing:.14em; font-weight:600; margin-bottom:25px; }
+      .experiment { display:grid; grid-template-columns:1fr 1fr; gap:12%; align-items:start; }
+      h2 { font-size:clamp(40px,5vw,64px); font-weight:500; line-height:1; letter-spacing:-.075em; margin:0; }
+      .copy { font-size:19px; line-height:1.55; color:var(--grey); max-width:485px; padding-top:7px; }
+      .copy p:first-child { margin-top:0; }.copy p:last-child { margin-bottom:0; }
+      .contribution { background:var(--soft); }
+      .contribution-inner { max-width:760px; margin:auto; text-align:center; }
+      .contribution p { color:var(--grey); font-size:18px; line-height:1.5; margin:23px 0 37px; }
+      .card { margin:62px auto 0; background:#fff; border:1px solid var(--line); border-radius:16px; padding:38px; max-width:460px; text-align:left; }
+      .card-top { display:flex; justify-content:space-between; border-bottom:1px solid var(--line); padding-bottom:26px; margin-bottom:27px; }
+      .card-label { color:var(--grey); font-size:12px; }.amount { font-size:26px; letter-spacing:-.06em; }
+      .payment { display:flex; justify-content:space-between; align-items:center; }
+      .qr { width:54px; height:54px; background:repeating-conic-gradient(#000 0 25%,#fff 0 50%) 50% / 14px 14px; border:5px solid #fff; outline:1px solid #000; }
+      footer { border-top:1px solid var(--line); padding:31px 0 35px; display:flex; justify-content:space-between; align-items:center; color:var(--grey); font-size:12px; }
+      footer .brand img { width:88px; } .foot-note { text-align:right; }
+      @keyframes reveal { to { opacity:1; transform:translateY(0); } } 
+      @media (max-width:640px) { .wrap{padding:0 20px}.brand img{width:83px}.nav-links a:not(.nav-cta){display:none}.nav-links{gap:0}.hero{min-height:630px;padding:70px 0}.stats{margin:0 -20px}.stat{padding:30px 5px}.experiment{grid-template-columns:1fr;gap:35px}section{padding:100px 0}.card{padding:28px 23px}footer{align-items:flex-start;gap:25px}.foot-note{text-align:right} }
+    </style>
+  </head>
+  <body>
+    <header class="wrap"><nav class="nav"><a class="brand" href="#top" aria-label="Project €1 home"><img src="project-e1-logo.png" alt="Project €1" /></a><div class="nav-links"><a href="#experiment">The Experiment</a><a href="how-it-was-made.html">How it was made</a><a href="#contribute" class="nav-cta">Contribute €1</a></div></nav></header>
+    <main id="top">
+      <div class="wrap"><section class="hero"><div class="hero-inner"><img class="hero-logo" src="project-e1-logo.png" alt="Project €1" /><div class="eyebrow">PROJECT €1</div><h1>The world's most<br />honest business.</h1><p>Give €1.<br />Receive nothing.</p><a class="button" href="#contribute">Join The Experiment</a><div class="scroll-note">No fine print</div></div></section>
+      <div class="stats" aria-label="Project statistics"><div class="stat"><span class="stat-number" data-value="0">€0</span><span class="stat-label">Raised</span></div><div class="stat"><span class="stat-number" data-value="0">0</span><span class="stat-label">Participants</span></div><div class="stat"><span class="stat-number" data-value="0">0</span><span class="stat-label">Days</span></div></div></div>
+      <section id="experiment" class="wrap"><div class="experiment"><div><div class="section-kicker">01 — ABOUT</div><h2>The<br />Experiment</h2></div><div class="copy"><p>Project €1 is a small experiment in honesty, started by a bored teenager with a long summer and very little money.</p><p>By contributing, you are helping me remain beautifully unemployed—and keeping enough time free to make more completely unnecessary projects like this one.</p><p>There is no product. No promise. No urgent countdown. Just one euro, given freely, to an idea that is exactly what it says it is.</p></div></div></section>
+      <section id="contribute" class="contribution"><div class="wrap contribution-inner"><div class="section-kicker">02 — CONTRIBUTION</div><h2>Make your<br />contribution.</h2><p>Exactly €1.<br />Nothing more. Nothing less.</p><a class="button" href="https://paypal.me/projecteuro1" target="_blank" rel="noopener noreferrer">Continue with PayPal</a><div class="card"><div class="card-top"><div><div class="card-label">Contribution</div><div class="amount">€1.00</div></div><div class="card-label">One time</div></div><a class="payment" href="https://paypal.me/projecteuro1" target="_blank" rel="noopener noreferrer" aria-label="Pay with PayPal"><div><div class="card-label">Payment link</div><div style="font-size:13px;margin-top:5px">PayPal · projecteuro1</div></div><div class="qr" aria-label="PayPal QR placeholder"></div></a></div></div></section>
+    </main>
+    <footer class="wrap"><a class="brand" href="#top" aria-label="Project €1 home"><img src="project-e1-logo.png" alt="Project €1" /></a><div class="foot-note">Project €1<br />The world's most honest business.</div></footer>
+    <script>
+      const observer = new IntersectionObserver(entries => entries.forEach(entry => { if (!entry.isIntersecting) return; entry.target.querySelectorAll('[data-value]').forEach(el => { const end = Number(el.dataset.value); let start = null; const animate = t => { if (!start) start=t; const n=Math.round(end*Math.min((t-start)/900,1)); el.textContent = el.textContent.startsWith('€') ? `€${n}` : n; if(t-start<900) requestAnimationFrame(animate); }; requestAnimationFrame(animate); }); observer.unobserve(entry.target); }), {threshold:.5});
+      observer.observe(document.querySelector('.stats'));
+    </script>
+  </body>
+</html>
